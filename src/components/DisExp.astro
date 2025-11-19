@@ -1,0 +1,38 @@
+<p class="dis m-0 text-blanco font-semibold text-6xl">DISEÑAR </p>
+<p class="cre m-0 absolute md:relative inset-9 md:inset-0 opacity-0 text-nowrap text-lima font-regular text-5xl md:text-6xl">ES CREAR</p> 
+<p class="dis m-0 text-blanco font-semibold md:text-6xl">EXPERIENCIAS</p>
+
+<script>
+  import {animate, onScroll, utils, createScope, stagger} from 'animejs';
+  
+  createScope({
+    mediaQueries: {
+      isMedium: '(width >= 48rem)',
+    }
+  })
+  .add( self => {
+    const { isMedium } = self.matches;
+
+    animate('.dis', {
+      y: isMedium ? 0 : stagger(['-2rem','2rem']),
+      x: isMedium ? [stagger(['8rem','-8rem']),stagger(['-1rem','1rem'])] : 0,
+      ease: 'inOut',
+      autoplay: onScroll({
+        enter: 'center+=10% top-=100%',
+        leave: 'center-=10% bottom+=100%',
+        sync: true,
+      })
+    })
+
+    animate('.cre' , {
+      'opacity': '100%',
+      ease: 'inOut',
+      autoplay: onScroll({
+        enter: 'center+=10% top-=100%',
+        leave: 'center-=10% bottom+=100%',
+        sync: true
+      })
+    })
+  });
+
+</script>

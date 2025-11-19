@@ -1,0 +1,13 @@
+---
+// Button.astro
+const {href, sub, icono, text, class: extraClass = ""} = Astro.props
+
+const base = "flex flex-col gap-4 justify-end content-end p-8 bg-lima rounded-2xl aspect-1/1 cursor-pointer group overflow-hidden hover:scale-105 transition-all relative";
+---
+<a href={href} class={`${base} ${extraClass}`}>
+  <!--<img src={icono} alt="" class="origin-center shrink-0 scale-100 w-30 h-30 left-1/2 right-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute group-hover:right-1 group-hover:-top-0 group-hover:scale-200 transition-all ease"> -->
+
+  <span class="relative translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all ease-inout font-kaku">{sub}</span>
+
+  <span class="transition-all ease-inout text-azul font-tektur font-medium text-4xl bottom-4 group-hover:bottom-1/2">{text}</span>
+</a>

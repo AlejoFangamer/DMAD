@@ -5,18 +5,61 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>DMAD</title>
 	</head>
 	<body>
-		<slot />
+		<div>
+			<slot />
+		</div>
 	</body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+	@import "tailwindcss";
+
+	@font-face {
+		font-family: tektur;
+		font-style: normal;
+		font-weight: 400 500 600 700 800 900;
+		src: url("/Fuentes/Tektur/Tektur.ttf") format("ttf");
 	}
+
+	@font-face {
+		font-family: "Zen Kaku Gothic New";
+		font-style: normal;
+		font-weight: 300 400 500 700 900;
+		src: 
+			local("kaku"),
+			url("/Fuentes/Kaku/ZenKakuGothicNew-Light.ttf") format("ttf"),
+			url("/Fuentes/Kaku/ZenKakuGothicNew-Regular.ttf") format("ttf"),
+			url("/Fuentes/Kaku/ZenKakuGothicNew-Medium.ttf") format("ttf"),
+			url("/Fuentes/Kaku/ZenKakuGothicNew-Bold.ttf") format("ttf"),
+			url("/Fuentes/Kaku/ZenKakuGothicNew-Black.ttf") format("ttf");
+	}
+
+	@theme {
+		--color-lima: oklch(0.8438 0.1348 116.78);
+		--color-azul: oklch(0.3612 0.1448 275.87);
+		--color-blanco: oklch(0.9127 0.0084 91.49);
+
+		--font-tektur: "tektur", "sans-serif";
+		--font-kaku: "Zen Kaku Gothic New", "sans-serif";
+	}
+
+	html {
+
+	}
+
+	body {
+		@apply grid mx-[50px] sm:mx-[100px] xl:mx-[200px] 2xl:mx-[300px] my-[100px] sm:my-[160px] mb-0 bg-azul;
+	}
+	
+	body > div {
+		@apply container;
+	}
+
+	.par {
+		@apply font-kaku;
+	}
+
 </style>

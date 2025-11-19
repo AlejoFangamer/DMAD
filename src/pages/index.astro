@@ -1,11 +1,113 @@
 ---
+import Boton from '../components/Boton.astro';
+import DisExp from '../components/DisExp.astro';
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import imagen from '../assets/images/1.webp'
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<main>
+		<section class="flex flex-col mb-150 gap-8">
+				<div class="flex h-full justify-center">
+					<h1 class="text-7xl sm:text-8xl [writing-mode:horizontal-tb] m-0 font-tektur text-lima font-semibold">DEL MANDO <br> AL DISEÑO</h1>
+				</div>
+				<div class="flex flex-col md:flex-col gap-5">
+					<h2 class="m-0 font-tektur font-medium text-left min-h-min row-start-3 md:row-start-auto text-blanco">La guía para diseñadores y desarrolladores sobre la UX en videojuegos</h2>
+					<Boton text="Empezar el juego" class="h-10 aspect-auto  md:aspect-2/1"></Boton>
+				</div>
+				<div class="absolute left-0 bottom-0 translate-y-20 w-full h-100 overflow-hidden mask-b-from-20% mask-b-to-80% -z-10">
+					<img src={imagen.src} alt="" class="absolute h-130 top-0 md:top-40 shrink-0 scale-100 md:scale-200 pointer-events-none inset-1/2 origin-center -translate-x-120 md:-translate-x-108">
+				</div>
+		</section>
+
+		<div class="flex flex-col md:flex-row justify-center content-center my-50 font-tektur font-medium text-center text-4xl relative">
+			<DisExp></DisExp>
+		</div>
+
+		<article class="flex flex-col md:grid gap-10 grid-cols-4 grid-rows-1 items-center">
+			<div class="flex flex-col col-span-2">
+				<h2 class="font-tektur text-5xl text-lima">Acerca del proyecto</h2>
+				<p class="font-kaku font-medium text-blanco">“DEL MANDO AL DISEÑO” Es un proyecto de investigación de diseño que busca entrenar a los desarrolladores y diseñadores de videojuegos con conceptos y fundamentos sobre la experiencia de usuario (UX) para que puedan ser aplicados de forma efectiva en sus proyectos y asi ofrecer un producto de calidad y con una jugabilidad exquisita.</p>
+			</div>
+			<Boton text="Conocer más" class="aspect-2-1"></Boton>
+		</article>
+
+		<section class="grid gap-4 grid-cols-4 grid-rows-[repeat(3, 1fr)] my-50 p-4">
+			<Boton 
+			text="Terminología UX" 
+			sub="“Fricción” “Flujo” “Usabilidad”, Terminos y fundamentos al tomar en cuenta para mejorar la experiencia del usuario." 
+			class="col-span-2 aspect-2/1">
+			</Boton>
+
+			<figure class="col-span-2 bg-azul"></figure>
+
+			<Boton 
+			text="Recursos" 
+			sub="Herramientas digitales que te ayudarán en la exploración de la UX en tus proyectos"
+			class="col-start-2">
+			</Boton>
+
+			<Boton 
+			text="Noticias UX" 
+			sub="Conoce sobre los últimos temas de interés en el mundo de la experiencia de usuario en videojuegos."
+			class="col-span-2 aspect-2/1">
+			</Boton>
+
+			<figure class="col-span-3 bg-azul"></figure>
+
+			<Boton text="Quienes somos" 
+			sub="¿ Quienes hicieron este proyecto ? ¿ Contactos? ¿Feedback?">
+			</Boton>
+		</section>
+
+		<section class="grid grid-cols-3">
+			<div>
+				<h2 class="font-tektur text-lima text-5xl">Manuales complementarios</h2>
+				<p class="text-blanco font-kaku">Consigue nuestros manuales sobre la UX en los videojuegos , con información mas profunda, terminología atemporal , casos de estudio famosos y practicas aplicables. <br> <br> Disponibles en formatos físicos y digitales!</p>
+				<Boton text="Consiguelos ahora"></Boton>
+			</div>
+			<div class="flex col-span-2 overflow-hidden">
+				<figure class="">
+					<img src={imagen.src} alt="" class="h-100">
+				</figure>
+			</div>
+		</section>
+
+		<footer class="left-0 flex flex-col md:flex-row justify-between mt-40 bg-lima p-20">
+			<div class="text-center">
+				<p>Alejandro Moreno y Angel Poveda</p>
+				<p>INSTITUTO UNIVERSITARIO BELLAS ARTES</p>
+			</div>
+			<div class="text-center">
+				<p>DISEÑO GRAFICO</p>
+				<p>3er SEMESTRE</p>
+			</div>
+		</footer>
+	</main>
 </Layout>
+
+<script>
+	import { animate, splitText, stagger , spring } from 'animejs';
+	
+	const { words } = splitText('h1',
+	{
+		words: {wrap: 'visible'}
+	})
+
+	animate(words, {
+		x: [
+			{ to: ['-100%', '0%']}
+		],
+		opacity: [
+			{ to: ['0%', '100%']}
+		],
+		duration: 750,
+		ease: spring({ bounce: .35 }),
+		delay: stagger(100),
+		loop: false
+	})
+</script>
