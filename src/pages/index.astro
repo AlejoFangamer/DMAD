@@ -3,7 +3,6 @@ import Boton from "../components/Boton.astro";
 import DisExp from "../components/DisExp.astro";
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
-import imagen from "../assets/images/1.png";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -32,7 +31,7 @@ import imagen from "../assets/images/1.png";
         </div>
       </div>
       <div
-        class="absolute origin-top scale-110 left-0 top-150 translate-y-1/8 bg-cover bg-[url(../assets/images/1.png)] w-full h-110 mask-b-from-20% mask-b-to-80% bg-center-top"
+        class="absolute origin-top scale-110 left-0 top-150 translate-y-1/8 bg-cover bg-[url(/images/1.png)] w-full h-110 mask-b-from-20% mask-b-to-80% bg-center-top"
       >
       </div>
       <!---
@@ -64,7 +63,7 @@ import imagen from "../assets/images/1.png";
       <div class="flex">
         <Boton text="Conocer más" class="aspect-2-1" />
         <div
-          class="absolute bg-[url(../assets/images/2.png)] bg-cover xl:scale-150 w-120 h-120 origin-left -translate-y-1/4 translate-x-1/8 -z-1 pointer-events-none mask-r-from-70%"
+          class="absolute bg-[url(/images/2.png)] bg-cover xl:scale-150 w-120 h-120 origin-left -translate-y-1/4 translate-x-1/8 -z-1 pointer-events-none mask-r-from-70%"
         >
         </div>
       </div>
@@ -95,7 +94,7 @@ import imagen from "../assets/images/1.png";
 
       <div>
         <figure
-          class="col-span-3 absolute bg-[url(../assets/images/3.png)] w-100 h-100 bg-cover bg-center left-0 -translate-y-1/2 translate-x-70 origin-right scale-200 mask-l-from-40% -z-1"
+          class="col-span-3 absolute bg-[url(/images/3.png)] w-100 h-100 bg-cover bg-center left-0 -translate-y-1/2 translate-x-70 origin-right scale-200 mask-l-from-40% -z-1"
         >
         </figure>
       </div>
@@ -120,7 +119,7 @@ import imagen from "../assets/images/1.png";
       </div>
       <div class="flex col-span-2 overflow-hidden">
         <figure class="">
-          <img src={imagen.src} alt="" class="h-100" />
+          <img src="/images/1.png" alt="" class="h-100" />
         </figure>
       </div>
     </section>
