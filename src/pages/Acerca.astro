@@ -1,0 +1,25 @@
+---
+import TitulosAnim from "../components/TitulosAnim.astro";
+import Layout from "../layouts/Layout.astro";
+
+const anim = {
+  old: {
+    name: "trans",
+    duration: "2s",
+  },
+  new: {
+    name: "trans",
+    duration: "2s",
+    direction: "reverse"
+  },
+};
+
+const customTransition = {
+  forwards: anim,
+  backwards: anim,
+};
+---
+
+<Layout>
+  <TitulosAnim titulo="Acerca del proyecto"></TitulosAnim>
+</Layout>

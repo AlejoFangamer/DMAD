@@ -1,11 +1,16 @@
+---
+import ClientRouter from "astro/components/ClientRouter.astro"
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>DMAD</title>
+		<ClientRouter />
 	</head>
 	<body>
 		<div>
@@ -21,20 +26,18 @@
 		font-family: tektur;
 		font-style: normal;
 		font-weight: 400 500 600 700 800 900;
-		src: url("/Fuentes/Tektur/Tektur.ttf") format("ttf");
+		src: url("/Fuentes/Tektur/Tektur.ttf") format('truetype');
 	}
 
 	@font-face {
 		font-family: "Zen Kaku Gothic New";
 		font-style: normal;
 		font-weight: 300 400 500 700 900;
-		src: 
-			local("kaku"),
-			url("/Fuentes/Kaku/ZenKakuGothicNew-Light.ttf") format("ttf"),
-			url("/Fuentes/Kaku/ZenKakuGothicNew-Regular.ttf") format("ttf"),
-			url("/Fuentes/Kaku/ZenKakuGothicNew-Medium.ttf") format("ttf"),
-			url("/Fuentes/Kaku/ZenKakuGothicNew-Bold.ttf") format("ttf"),
-			url("/Fuentes/Kaku/ZenKakuGothicNew-Black.ttf") format("ttf");
+		src: url("/Fuentes/Kaku/ZenKakuGothicNew-Light.ttf") format('truetype'),
+			url("/Fuentes/Kaku/ZenKakuGothicNew-Regular.ttf") format('truetype'),
+			url("/Fuentes/Kaku/ZenKakuGothicNew-Medium.ttf") format('truetype'),
+			url("/Fuentes/Kaku/ZenKakuGothicNew-Bold.ttf") format('truetype'),
+			url("/Fuentes/Kaku/ZenKakuGothicNew-Black.ttf") format('truetype');
 	}
 
 	@theme {
@@ -45,18 +48,32 @@
 		--font-tektur: "tektur", "sans-serif";
 		--font-kaku: "Zen Kaku Gothic New", "sans-serif";
 	}
-
-	html {
-
-	}
+	
+	@layer utilities {
+		.scrollbar-hidden::-webkit-scrollbar {
+			display: none;
+		}
+		.scrollbar-hidden {
+			-ms-overflow-style: none;  /* IE and Edge */
+			scrollbar-width: none;     /* Firefox */
+		}
+  }
 
 	body {
-		@apply grid mx-[50px] lg:mx-[200px] 2xl:mx-[300px] mt-[100px] sm:mt-[160px] mb-0 bg-azul overflow-x-hidden;
+		@apply grid place-content-center bg-azul;
 	}
-	
 
-	.par {
-		@apply font-kaku;
+	body > div {
+		@apply container relative overflow-x-hidden;
 	}
+
+	@keyframes trans {
+    0% {
+			transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 
 </style>

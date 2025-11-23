@@ -1,0 +1,21 @@
+---
+const { titulo } = Astro.props;
+---
+
+<h1 transition:name="hola" class="mt-40 text-center font-tektur text-5xl text-lima">{titulo}</h1>
+
+<script>
+  import { animate,splitText,stagger } from "animejs";
+
+  const {chars} = splitText('h1',{
+    chars: { wrap:'clip' }
+  });
+
+  animate( chars, {
+    y: { to: ['100%', '0%'] },
+    duration: 400,
+    ease: 'outBack',
+    delay: stagger(50)
+  })
+
+</script>

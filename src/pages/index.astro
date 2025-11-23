@@ -1,16 +1,38 @@
 ---
 import Boton from "../components/Boton.astro";
 import DisExp from "../components/DisExp.astro";
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
+import Carrusel from "../components/Carrusel.astro";
+const imgs = [
+  '/Carrousel/1.png',
+  '/Carrousel/2.png',
+  '/Carrousel/3.png',
+  '/Carrousel/4.png'
+]
+const anim = {
+  old: {
+    name: "trans",
+    duration: "2s",
+  },
+  new: {
+    name: "trans",
+    duration: "2s",
+    direction: "reverse"
+  },
+};
+
+const customTransition = {
+  forwards: anim,
+  backwards: anim,
+};
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <main class="flex flex-col justify-center w-full">
-    <section class="flex mb-100 justify-center">
+  <main class="p-10 scroll-smooth">
+    <section class="flex justify-center pt-20">
       <div class="flex w-full flex-col lg:flex-row">
         <h1
           class="text-7xl sm:text-8xl [writing-mode:horizontal-tb] m-0 font-tektur text-lima font-semibold"
@@ -25,33 +47,29 @@ import Layout from "../layouts/Layout.astro";
             videojuegos
           </h2>
           <Boton
+            href="#acerca"
             text="Empezar el juego"
             class="h-10 aspect-auto md:aspect-2/1"
           />
         </div>
       </div>
       <div
-        class="absolute origin-top scale-110 left-0 top-150 translate-y-1/8 bg-cover bg-[url(/images/1.png)] w-full h-110 mask-b-from-20% mask-b-to-80% bg-center-top"
+        class="absolute origin-top scale-100 left-0 top-150 translate-y-1/8 bg-cover bg-center bg-[url(/images/1.png)] w-full h-110 mask-b-from-10% mask-b-to-50%"
       >
       </div>
-      <!---
-				<div class="absolute left-0 bottom-0 translate-y-20 w-full h-100 overflow-hidden mask-b-from-20% mask-b-to-80% -z-10">
-					<img src={imagen.src} alt="" class="absolute h-130 top-0 md:top-40 shrink-0 scale-100 md:scale-200 pointer-events-none inset-1/2 origin-center -translate-x-120 md:-translate-x-108">
-				</div>
-				-->
     </section>
 
     <div
-      class="flex flex-col xl:flex-row justify-center content-center my-70 font-tektur font-medium text-center text-4xl relative w-full"
+      class="flex flex-col xl:flex-row justify-center content-center mt-90 mb-70 font-tektur font-medium text-center text-4xl relative w-full"
     >
       <DisExp />
     </div>
 
-    <article
-      class="flex flex-col md:grid gap-10 grid-cols-4 grid-rows-1 items-center"
+    <article id="acerca"
+      class="flex flex-col md:grid gap-0 grid-cols-4 grid-rows-1 items-center pt-20"
     >
       <div class="flex flex-col col-span-2">
-        <h2 class="font-tektur text-5xl text-lima">Acerca del proyecto</h2>
+        <h2 transition:name="hola" class="text-center font-tektur text-5xl text-lima" >Acerca del proyecto</h2>
         <p class="font-kaku font-medium text-blanco">
           “DEL MANDO AL DISEÑO” Es un proyecto de investigación de diseño que
           busca entrenar a los desarrolladores y diseñadores de videojuegos con
@@ -61,79 +79,78 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </div>
       <div class="flex">
-        <Boton text="Conocer más" class="aspect-2-1" />
-        <div
-          class="absolute bg-[url(/images/2.png)] bg-cover xl:scale-150 w-120 h-120 origin-left -translate-y-1/4 translate-x-1/8 -z-1 pointer-events-none mask-r-from-70%"
-        >
-        </div>
+        <Boton href="/Acerca" text="Conocer más" class="aspect-2-1" />
+      </div>
+      <div
+          class="absolute bg-[url(/images/2.png)] scale-100 bg-cover bg-center xl:scale-150 w-120 h-120 origin-center -translate-y-1/3 -z-1 pointer-events-none mask-b-from-20% mask-b-to-70% order-1"
+      >
       </div>
     </article>
 
     <section
-      class="grid gap-4 grid-cols-4 grid-rows-[repeat(3, 1fr)] my-50 p-4"
+      class="flex flex-col sm:grid gap-4 grid-cols-4 grid-rows-[repeat(3, 1fr)] my-50 p-4"
     >
       <Boton
         text="Terminología UX"
         sub="“Fricción” “Flujo” “Usabilidad”, Terminos y fundamentos al tomar en cuenta para mejorar la experiencia del usuario."
-        class="col-span-2 aspect-2/1"
+        class="sm:col-span-2 sm:aspect-2/1"
       />
 
-      <figure class="col-span-2 bg-azul"></figure>
+      <h1 class="-order-1 text-center font-tektur text-5xl text-lima">Nuestras secciones</h1>
 
       <Boton
         text="Recursos"
         sub="Herramientas digitales que te ayudarán en la exploración de la UX en tus proyectos"
-        class="col-start-2"
+        class="sm:col-start-2"
       />
 
       <Boton
         text="Noticias UX"
         sub="Conoce sobre los últimos temas de interés en el mundo de la experiencia de usuario en videojuegos."
-        class="col-span-2 aspect-2/1"
+        class="sm:col-span-2 sm:aspect-2/1"
       />
 
-      <div>
-        <figure
+        <div
           class="col-span-3 absolute bg-[url(/images/3.png)] w-100 h-100 bg-cover bg-center left-0 -translate-y-1/2 translate-x-70 origin-right scale-200 mask-l-from-40% -z-1"
         >
-        </figure>
-      </div>
+        </div>
 
       <Boton
         text="Quienes somos"
         sub="¿ Quienes hicieron este proyecto ? ¿ Contactos? ¿Feedback?"
-        class="col-start-4"
+        class="sm:col-start-4"
       />
     </section>
 
-    <section class="grid grid-cols-3">
-      <div>
-        <h2 class="font-tektur text-lima text-5xl">Manuales complementarios</h2>
-        <p class="text-blanco font-kaku">
-          Consigue nuestros manuales sobre la UX en los videojuegos , con
-          información mas profunda, terminología atemporal , casos de estudio
+    <section class="flex w-full">
+      <div class="w-100">
+        <h2 class="font-tektur text-lima text-4xl text-center">Manuales complementarios</h2>
+        <Carrusel images={imgs} ></Carrusel>
+        <p class="text-blanco font-kaku text-pretty">
+          Consigue nuestros manuales sobre la UX en los videojuegos, con
+          información mas profunda, terminología atemporal, casos de estudio
           famosos y practicas aplicables. <br />
           <br /> Disponibles en formatos físicos y digitales!
         </p>
         <Boton text="Consiguelos ahora" />
       </div>
-      <div class="flex col-span-2 overflow-hidden">
-        <figure class="">
-          <img src="/images/1.png" alt="" class="h-100" />
-        </figure>
-      </div>
     </section>
+    
   </main>
-  <footer class="flex flex-col md:flex-row justify-between mt-40 bg-lima p-20">
-    <div class="text-center">
+  <footer class="flex flex-col md:flex-row justify-between items-center mt-40 bg-lima px-20 py-10 font-kaku text-center text-azul">
+    <div class=" pb-5 border-b-4 border-azul">
+      <p class="font-bold text-2xl">Desarrollado por:</p>
       <p>Alejandro Moreno y Angel Poveda</p>
-      <p>INSTITUTO UNIVERSITARIO BELLAS ARTES</p>
+      <p>Noviembre de 2025</p>
     </div>
-    <div class="text-center">
+    <div class="pt-5">
+      <p>INSTITUTO UNIVERSITARIO BELLAS ARTES</p>
       <p>DISEÑO GRAFICO</p>
       <p>3er SEMESTRE</p>
     </div>
+    <img src="/BALogo.svg" alt="" class="w-40 fill-azul">
   </footer>
+  </div>
 </Layout>
 
 <script>
