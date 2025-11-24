@@ -35,7 +35,7 @@ const customTransition = {
     <section class="flex justify-center pt-20">
       <div class="flex w-full flex-col lg:flex-row">
         <h1
-          class="text-7xl sm:text-8xl [writing-mode:horizontal-tb] m-0 font-tektur text-lima font-semibold"
+          class="dmad-tit text-7xl sm:text-8xl [writing-mode:horizontal-tb] m-0 font-tektur text-lima font-semibold"
         >
           DEL MANDO <br /> AL DISEÑO
         </h1>
@@ -47,6 +47,7 @@ const customTransition = {
             videojuegos
           </h2>
           <Boton
+            trans="u" 
             href="#acerca"
             text="Empezar el juego"
             class="h-10 aspect-auto md:aspect-2/1"
@@ -66,10 +67,10 @@ const customTransition = {
     </div>
 
     <article id="acerca"
-      class="flex flex-col md:grid gap-0 grid-cols-4 grid-rows-1 items-center pt-20"
+      class="section flex flex-col md:grid gap-0 grid-cols-4 grid-rows-1 items-center pt-20"
     >
-      <div class="flex flex-col col-span-2">
-        <h2 transition:name="hola" class="text-center font-tektur text-5xl text-lima" >Acerca del proyecto</h2>
+      <div class="sEle flex flex-col col-span-2">
+        <h2 class="text-center font-tektur text-5xl text-lima" >Acerca del proyecto</h2>
         <p class="font-kaku font-medium text-blanco">
           “DEL MANDO AL DISEÑO” Es un proyecto de investigación de diseño que
           busca entrenar a los desarrolladores y diseñadores de videojuegos con
@@ -78,11 +79,11 @@ const customTransition = {
           un producto de calidad y con una jugabilidad exquisita.
         </p>
       </div>
-      <div class="flex">
-        <Boton href="/Acerca" text="Conocer más" class="aspect-2-1" />
+      <div class="sEle flex">
+        <Boton trans="hola" href="/Acerca" text="Conocer más" class="aspect-2-1" />
       </div>
       <div
-          class="absolute bg-[url(/images/2.png)] scale-100 bg-cover bg-center xl:scale-150 w-120 h-120 origin-center -translate-y-1/3 -z-1 pointer-events-none mask-b-from-20% mask-b-to-70% order-1"
+          class="sEle absolute bg-[url(/images/2.png)] scale-100 bg-cover bg-center xl:scale-150 w-120 h-120 origin-center -translate-y-1/3 -z-1 pointer-events-none mask-b-from-20% mask-b-to-70% order-1"
       >
       </div>
     </article>
@@ -91,6 +92,8 @@ const customTransition = {
       class="flex flex-col sm:grid gap-4 grid-cols-4 grid-rows-[repeat(3, 1fr)] my-50 p-4"
     >
       <Boton
+        trans="termin" 
+        href="/Terminologia"
         text="Terminología UX"
         sub="“Fricción” “Flujo” “Usabilidad”, Terminos y fundamentos al tomar en cuenta para mejorar la experiencia del usuario."
         class="sm:col-span-2 sm:aspect-2/1"
@@ -99,47 +102,50 @@ const customTransition = {
       <h1 class="-order-1 text-center font-tektur text-5xl text-lima">Nuestras secciones</h1>
 
       <Boton
+        trans="q"
         text="Recursos"
         sub="Herramientas digitales que te ayudarán en la exploración de la UX en tus proyectos"
         class="sm:col-start-2"
       />
 
       <Boton
+        trans="t"
         text="Noticias UX"
         sub="Conoce sobre los últimos temas de interés en el mundo de la experiencia de usuario en videojuegos."
         class="sm:col-span-2 sm:aspect-2/1"
       />
 
         <div
-          class="col-span-3 absolute bg-[url(/images/3.png)] w-100 h-100 bg-cover bg-center left-0 -translate-y-1/2 translate-x-70 origin-right scale-200 mask-l-from-40% -z-1"
+          class="col-span-3 absolute bg-[url(/images/3.png)] w-100 h-100 bg-cover bg-center left-0 -translate-y-1/2 translate-x-70 origin-right scale-200 mask-l-from-40% -z-2"
         >
         </div>
 
       <Boton
+        trans="z"
         text="Quienes somos"
         sub="¿ Quienes hicieron este proyecto ? ¿ Contactos? ¿Feedback?"
         class="sm:col-start-4"
       />
     </section>
 
-    <section class="flex w-full">
+    <section class="flex w-full section">
       <div class="w-100">
-        <h2 class="font-tektur text-lima text-4xl text-center">Manuales complementarios</h2>
+        <h2 class="font-tektur text-lima text-4xl text-center sEle">Manuales complementarios</h2>
         <Carrusel images={imgs} ></Carrusel>
-        <p class="text-blanco font-kaku text-pretty">
+        <p class="sEle text-blanco font-kaku text-pretty text-center font-medium">
           Consigue nuestros manuales sobre la UX en los videojuegos, con
           información mas profunda, terminología atemporal, casos de estudio
           famosos y practicas aplicables. <br />
           <br /> Disponibles en formatos físicos y digitales!
         </p>
-        <Boton text="Consiguelos ahora" />
+        <Boton trans="y" text="Consiguelos ahora" class="sEle" />
       </div>
     </section>
     
   </main>
-  <footer class="flex flex-col md:flex-row justify-between items-center mt-40 bg-lima px-20 py-10 font-kaku text-center text-azul">
+  <footer class="flex flex-col md:flex-row justify-between items-center mt-40 bg-lima px-20 py-10 font-kaku text-center text-azul font-medium">
     <div class=" pb-5 border-b-4 border-azul">
-      <p class="font-bold text-2xl">Desarrollado por:</p>
+      <p class="font-black text-2xl">Desarrollado por:</p>
       <p>Alejandro Moreno y Angel Poveda</p>
       <p>Noviembre de 2025</p>
     </div>
@@ -153,19 +159,4 @@ const customTransition = {
   </div>
 </Layout>
 
-<script>
-  import { animate, splitText, stagger, spring } from "animejs";
-
-  const { words } = splitText("h1", {
-    words: { wrap: "visible" },
-  });
-
-  animate(words, {
-    x: [{ to: ["-100%", "0%"] }],
-    opacity: [{ to: ["0%", "100%"] }],
-    duration: 750,
-    ease: spring({ bounce: 0.35 }),
-    delay: stagger(100),
-    loop: false,
-  });
-</script>
+<script src="../layouts/Animations.js" ></script>

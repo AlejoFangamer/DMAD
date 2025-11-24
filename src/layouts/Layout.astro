@@ -3,7 +3,7 @@ import ClientRouter from "astro/components/ClientRouter.astro"
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -27,19 +27,45 @@ import ClientRouter from "astro/components/ClientRouter.astro"
 		font-style: normal;
 		font-weight: 400 500 600 700 800 900;
 		src: url("/Fuentes/Tektur/Tektur.ttf") format('truetype');
-	}
+	};
+
+	@font-face {
+		font-family: "Zen Kaku Gothic New";
+		font-style: light;
+		font-weight: 300;
+		src: url("/Fuentes/Kaku/ZenKakuGothicNew-Light.ttf") format('truetype');
+	};
+
+		@font-face {
+		font-family: "Zen Kaku Gothic New";
+		font-style: normal;
+		font-weight: 400;
+		src:
+			url("/Fuentes/Kaku/ZenKakuGothicNew-Regular.ttf") format('truetype');
+	};
 
 	@font-face {
 		font-family: "Zen Kaku Gothic New";
 		font-style: normal;
-		font-weight: 300 400 500 700 900;
-		src: url("/Fuentes/Kaku/ZenKakuGothicNew-Light.ttf") format('truetype'),
-			url("/Fuentes/Kaku/ZenKakuGothicNew-Regular.ttf") format('truetype'),
-			url("/Fuentes/Kaku/ZenKakuGothicNew-Medium.ttf") format('truetype'),
-			url("/Fuentes/Kaku/ZenKakuGothicNew-Bold.ttf") format('truetype'),
-			url("/Fuentes/Kaku/ZenKakuGothicNew-Black.ttf") format('truetype');
-	}
+		font-weight: 500;
+		src:
+			url("/Fuentes/Kaku/ZenKakuGothicNew-Medium.ttf") format('truetype');
+	};
 
+		@font-face {
+		font-family: "Zen Kaku Gothic New";
+		font-style: normal;
+		font-weight: 700;
+		src:
+			url("/Fuentes/Kaku/ZenKakuGothicNew-Bold.ttf") format('truetype');
+	};
+		@font-face {
+		font-family: "Zen Kaku Gothic New";
+		font-style: normal;
+		font-weight: 900;
+		src:
+			url("/Fuentes/Kaku/ZenKakuGothicNew-Black.ttf") format('truetype');
+	};
 	@theme {
 		--color-lima: oklch(0.8438 0.1348 116.78);
 		--color-azul: oklch(0.3612 0.1448 275.87);
@@ -66,14 +92,4 @@ import ClientRouter from "astro/components/ClientRouter.astro"
 	body > div {
 		@apply container relative overflow-x-hidden;
 	}
-
-	@keyframes trans {
-    0% {
-			transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
 </style>

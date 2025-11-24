@@ -15,7 +15,7 @@ export default function Dots({ count }) {
         <a
           key={i}
           onClick={() => goTo(i)}
-          className={`aspect-square w-10 inline-block rounded-[0.5em] text-lima transition-all 
+          className={`opacity-0 aspect-square w-10 inline-block rounded-[0.5em] text-lima transition-all trans ease-[cubic-bezier(.42,1.95,.56,.98)] duration-500 sEle
             ${i === current ? "scale-100 bg-lima" : "scale-50 bg-blanco"}`
           }
         />

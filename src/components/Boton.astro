@@ -1,6 +1,6 @@
 ---
 // Button.astro
-const {href, sub, icono, text, class: extraClass = ""} = Astro.props
+const {trans, href, sub, icono, text, class: extraClass = ""} = Astro.props
 
 const base = "flex flex-col gap-4 justify-end content-end p-8 bg-lima rounded-2xl aspect-1/1 cursor-pointer group overflow-hidden hover:scale-105 transition-all relative no-underline";
 ---
@@ -9,5 +9,5 @@ const base = "flex flex-col gap-4 justify-end content-end p-8 bg-lima rounded-2x
 
   <span class="relative translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all ease-inout font-kaku">{sub}</span>
 
-  <span class="transition-all ease-inout text-azul font-tektur font-medium text-4xl bottom-4 group-hover:bottom-1/2">{text}</span>
+  <span transition:name=`${trans}` class="transition-all ease-inout text-azul font-tektur font-medium text-4xl bottom-4 group-hover:bottom-1/2">{text}</span>
 </a>

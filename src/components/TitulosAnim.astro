@@ -1,8 +1,8 @@
 ---
-const { titulo } = Astro.props;
+const { titulo , name } = Astro.props;
 ---
 
-<h1 transition:name="hola" class="mt-40 text-center font-tektur text-5xl text-lima">{titulo}</h1>
+<h1 transition:name=`${name}` class="mt-40 text-center font-tektur text-5xl text-lima">{titulo}</h1>
 
 <script>
   import { animate,splitText,stagger } from "animejs";
@@ -17,5 +17,4 @@ const { titulo } = Astro.props;
     ease: 'outBack',
     delay: stagger(50)
   })
-
 </script>

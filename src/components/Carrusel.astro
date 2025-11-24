@@ -3,7 +3,7 @@ const {images = []} = Astro.props;
 import Dots from "./Dots";
 ---
 
-<div class="carousel flex overflow-hidden scroll-smooth snap-x snap-mandatory rounded-2xl w-full aspect-1/1 shrink-0 scrollbar-hidden">
+<div class="carousel flex overflow-hidden scroll-smooth snap-x snap-mandatory rounded-2xl w-full aspect-1/1 shrink-0 scrollbar-hidden sEle">
   <div id="slides" class="flex transition-all ease-[cubic-bezier(0.25, 1, 0.5, 1)]">
       {
         images.map((img,i) => (
@@ -13,7 +13,7 @@ import Dots from "./Dots";
   </div>
 </div>
 
-<Dots client:load count={images.length} />
+<Dots client:load="react" count={images.length} />
 
 <script>
   const carousel = document.getElementById("#carousel");
