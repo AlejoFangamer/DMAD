@@ -1,10 +1,11 @@
-<p class="dis m-0 text-blanco font-semibold text-7xl xl:text-6xl">DISEÑAR </p>
-<p class="cre m-0 absolute xl:relative inset-11 xl:inset-0 opacity-0 text-nowrap text-lima font-regular text-5xl md:text-6xl">ES CREAR</p> 
-<p class="dis m-0 text-blanco font-semibold text-5xl">EXPERIENCIAS</p>
+<p class="dis m-0 text-blanco text-center font-semibold text-7xl md:text-6xl">DISEÑAR </p>
+<p class="cre m-0 absolute xl:relative inset-11 md:inset-7 xl:inset-0 opacity-0 text-nowrap text-lima font-regular text-5xl md:text-6xl">ES CREAR</p> 
+<p class="dis m-0 text-blanco text-center font-semibold text-4xl md:text-6xl">EXPERIENCIAS</p>
 
 <script>
-  import {animate, onScroll, utils, createScope, stagger} from 'animejs';
+  import {animate, onScroll, createScope, stagger} from 'animejs';
   
+  function pageLoad() {
   createScope({
     mediaQueries: {
       isMedium: '(width >= 80rem)',
@@ -12,7 +13,6 @@
   })
   .add( self => {
     const { isMedium } = self.matches;
-
     animate('.dis', {
       y: isMedium ? 0 : stagger(['-2rem','2rem']),
       x: isMedium ? [stagger(['8rem','-8rem']),stagger(['-1rem','1rem'])] : 0,
@@ -33,6 +33,9 @@
         sync: true
       })
     })
-  });
+  });    
+  }
+
+  document.addEventListener("astro:page-load", pageLoad);
 
 </script>

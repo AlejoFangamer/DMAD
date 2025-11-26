@@ -1,0 +1,40 @@
+---
+import Boton from "../components/Boton.astro";
+import TitulosAnim from "../components/TitulosAnim.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <main class="p-10 max-w-250">
+    <TitulosAnim name="noticias" titulo="Noticias UX" icono="/icons/Iconos-07-v.svg"></TitulosAnim>
+
+    <p class="w-full text-blanco text-center text-2xl font-kaku">Las ultimas novedades en el mundo de la experiencia del usuario en videojuegos.</p>
+
+    <div class="relative h-100 flex flex-col justify-end p-10 w-full overflow-hidden rounded-2xl box-border">
+      <div class="absolute left-0 top-0 bg-center w-full h-full bg-[url(/Noticias/1.webp)] bg-cover bg-no-repeat mask-linear-from-20% mask-linear-180 object-cover">
+      </div>
+      <div class="relative">
+          <h2 class="text-5xl font-tektur font-black text-blanco m-0 mb-1">LO MÁS NUEVO</h2>
+          <h3 class="text-3xl font-tektur font-medium text-lima m-0">Lanzamiento del proyecto "DEL MANDO AL DISEÑO"</h3>
+          <p class="text-5xl font-kaku font-black text-blanco m-0 mb-1">28-11-2025</p>
+      </div>
+    </div>
+
+    <h2 class="text-center font-tektur text-4xl text-blanco">Otras noticias ux</h2>
+    <div class="flex flex-col lg:grid grid-cols-2 w-full gap-10 mt-10">
+      <Boton
+        trans="d"
+        class="aspect-2/1"
+        text="Noticia 1"
+        icono="/icons/Iconos-06.svg"
+      ></Boton>
+      <Boton
+        trans="e"
+        class="aspect-2/1"
+        text="Noticia 2"
+        icono="/icons/Iconos-12.svg"
+      ></Boton>
+    </div>
+
+  </main>
+</Layout>

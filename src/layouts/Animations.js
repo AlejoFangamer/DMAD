@@ -24,8 +24,7 @@ function pageLoad(){
       delay: stagger(50),
       autoplay: onScroll({
         target: element,
-          enter: 'center top',
-          leave: 'center bottom',
+          enter: 'bottom-=200',
           sync: 'play',
       })
     });

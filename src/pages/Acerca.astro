@@ -4,5 +4,70 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <TitulosAnim name="hola" titulo="Acerca del proyecto"></TitulosAnim>
+  <main class="p-10 max-w-250">
+    <TitulosAnim name="hola" titulo="Acerca del proyecto" icono="/icons/Iconos-02-v.svg"></TitulosAnim>
+    
+    <div class="flex flex-col text-blanco font-kaku text-1xl sm:text-2xl text-center text-pretty gap-20">
+      <p>
+      "DEL MANDO AL DISEÑO" surge a partir del interés por resolver, analizar y comunicar la experiencia de usuario dentro del diseño de videojuegos contemporáneos, especialmente en un público joven adulto. Ya que se ha encontrado que muchos jugadores que se encuestaron reportan haber tenido malas experiencias en una década marcada por lo digital y análogo, por ello, la investigación busca comprender cómo los principios del diseño UX influyen en la percepción, la interacción y la emoción del jugador mediante los entornos virtuales de un videojuego.
+      </p>
+
+      <div class="grid grid-cols-2 items-center gap-10">
+        <div>
+          <h2 class="text-5xl text-lima font-tektur font-medium">Origenes</h2>
+          <p class="text-left text-[14pt]">
+            Alrededor de Agosto 2025, se encuestaron a 21 Jóvenes adultos sobre sus experiencias con el diseño de los videojuegos, de los cuales reportaron ciertos patrones donde se sintieron frustrados o incómodos por una mala experiencia relacionadas a la interacción, como mapas confusos, bugs o controles fastidiosos. Eso y en base a algunas entrevistas con expertos, supimos que, desde nuestra carrera de diseño gráfico, podríamos intervenir aportando instrumentos visuales educativos sobre principios de la experiencia de usuario dirigidos a los desarrolladores para que puedan crear juegos pensados en el jugador.
+          </p>
+        </div>
+        <div class="w-full h-100 rounded-2xl overflow-hidden">
+          <img src="/Acerca/Empatia.webp" alt="" class="shrink-0 object-cover w-full h-full">
+        </div>
+      </div>
+      <div>
+        <h2 class="text-5xl text-lima font-tektur font-medium">Tipografías</h2>
+
+        <div class="grid grid-cols-2 h-50 rounded-2xl overflow-hidden">
+          <img src="/Acerca/Pix-Boc.webp" alt="" class="h-full w-full shrink-0 object-cover">
+          <img src="/Acerca/Trig-Boc.webp" alt="" class="h-full w-full shrink-0 object-cover">
+        </div>
+
+        <p>Se realizaron 2 tipografias que siguen las misma linea grafica, geometricas y rectilineas, inspiradas en los pixeles y poligonos de varios videojuegos. Estas tipografias fueron usadas en la publicidad y estilo del proyecto, ya sea en afiches o en las portadas de nuestras piezas.</p>
+      </div>
+
+      <div class="grid grid-cols-2 h-full gap-5">
+        <div>
+          <h2 class="font-pixeloide tracking-wide text-7xl">Pixeloide</h2>
+          <div class="rounded-2xl overflow-hidden w-full h-150">
+            <img src="/Acerca/Pix-Esp.webp" alt="" class="h-full object-cover">
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <h2 class="font-trigger text-7xl">Trigger</h2>
+          <div class="rounded-2xl overflow-hidden h-150">
+            <img src="/Acerca/Trig-Esp.webp" alt="" class="h-full object-contain origin-center">
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-5xl text-lima font-tektur font-medium">Infografia</h2>
+
+      <div class="grid grid-cols-2 justify-center gap-10">
+        <div class="h-full w-full rounded-2xl overflow-hidden shrink-0">
+          <img src="/Carrousel/1.webp" alt="" class="object-cover w-full h-full rounded-2xl">
+        </div>
+        <div>
+          <h2 class="text-5xl text-lima font-tektur font-medium ">Manuales</h2>
+          <p class="text-[14pt]"> Nuestro producto estrella, estos manuales que vienen en formatos fisicos y virtuales funcionan como una base y atemporal sobre los conceptos de Experiencia de usuario aplicados a videojuegos, incluyendo principios, ejemplos y en general, una guía teoría y didáctica visual de consulta para desarrolladores donde les aportamos información valiosa y necesaria sobre el mundo UX</p>
+        </div>
+      </div>
+      
+      <div>
+        <h2 class="text-5xl text-lima font-tektur font-medium">Sitio web</h2>
+        <img src="/Acerca/Pag.webp" alt="" class="object-cover w-full h-full rounded-2xl">
+        <p> Es la pieza que estas presenciando ahora mismo que sirve como un espacio mas dinamico y evolutivo, una version contemporanea de los manuales donde encontrarás: Nuevos conceptos experimentales, Recursos y Toolkits para desarrolladores y un tablon de noticias del mundo UX para que no te pierdas de alguna novedad o reconocimiento, todo con el fin de ser una plataforma accesible e interactuable siempre a la mano de la gente.</p>
+      </div>
+
+      <p>¿Que estas esperando? explora más de nuestras secciones y ¡QUE COMIENCE EL JUEGO!</p>
+    </div>
+  </main>
 </Layout>

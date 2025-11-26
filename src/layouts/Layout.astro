@@ -30,6 +30,18 @@ import ClientRouter from "astro/components/ClientRouter.astro"
 	};
 
 	@font-face {
+		font-family: pixel;
+		font-style: normal;
+		src: url("/Fuentes/Pixeloide.woff2") format('woff2');
+	};
+
+	@font-face {
+		font-family: trigger;
+		font-style: normal;
+		src: url("/Fuentes/Trigger.woff2") format('woff2');
+	};
+
+	@font-face {
 		font-family: "Zen Kaku Gothic New";
 		font-style: light;
 		font-weight: 300;
@@ -73,6 +85,8 @@ import ClientRouter from "astro/components/ClientRouter.astro"
 
 		--font-tektur: "tektur", "sans-serif";
 		--font-kaku: "Zen Kaku Gothic New", "sans-serif";
+		--font-trigger: "trigger", "sans-serif";
+		--font-pixeloide: "pixeloide", "sans-serif";
 	}
 	
 	@layer utilities {
@@ -86,10 +100,14 @@ import ClientRouter from "astro/components/ClientRouter.astro"
   }
 
 	body {
-		@apply grid place-content-center bg-azul;
+		@apply grid place-content-center bg-azul overflow-x-hidden;
+	}
+
+	body > div > main{
+		@apply p-10 max-w-250;
 	}
 
 	body > div {
-		@apply container relative overflow-x-hidden;
+		@apply container relative overflow-x-hidden sm:overflow-visible;
 	}
 </style>

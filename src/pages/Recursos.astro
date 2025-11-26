@@ -1,0 +1,52 @@
+---
+import Boton from "../components/Boton.astro";
+import TitulosAnim from "../components/TitulosAnim.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <main class="p-10 max-w-250">
+    <TitulosAnim name="termin" titulo="Terminologia UX" icono="/icons/Iconos-06-v.svg"></TitulosAnim>
+
+    <p class="w-full text-blanco text-center text-2xl font-kaku">¡A tomar nota! Conoce los multiples conceptos que rodean del buen UX y como aplicarlos a los videojuegos</p>
+
+    <h2 class="text-center font-tektur text-4xl text-blanco">LA EXPERIENCIA</h2>
+    <div class="flex flex-col lg:grid grid-cols-3 w-full gap-10 mt-10">
+      <Boton
+        class="aspect-2/1"
+        text="Fricción"
+      ></Boton>
+      <Boton
+        class="aspect-2/1"
+        text="Flujo"
+
+      ></Boton>
+      <Boton
+        class="aspect-2/1"
+        text="Usabilidad"
+      ></Boton>
+    </div>
+
+    <h2 class="text-center font-tektur text-4xl text-blanco">PRINCIPIOS</h2>
+    <div class="flex flex-col lg:grid grid-cols-3 w-full gap-10 mt-10">
+      <Boton
+        class="aspect-2/1"
+        text="Control"
+      ></Boton>
+      <Boton
+        class="aspect-2/1"
+        text="Coherencia"
+
+      ></Boton>
+      <Boton
+        class="aspect-2/1"
+        text="Errores"
+      ></Boton>
+      <Boton
+        class="aspect-2/1"
+        text="Flexibilidad"
+      ></Boton>
+    </div>
+
+  </main>
+</Layout>

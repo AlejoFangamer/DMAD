@@ -1,0 +1,44 @@
+---
+import TitulosAnim from "../components/TitulosAnim.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <main class="p-10 max-w-250">
+    <TitulosAnim name="somos" titulo="Quienes somos" icono="/icons/Iconos-13-v.svg"></TitulosAnim>
+
+    <h2 class="text-center font-tektur text-4xl text-blanco">¡Conoce al team!</h2>
+
+    <div class="flex flex-col lg:grid grid-cols-2 gap-10 font-kaku text-blanco text-pretty">
+      <div class="flex flex-col items-center">
+          <div class="flex">
+            <a href="https://www.instagram.com/almobu_artz/" target="_blank">
+            <div class="absolute bg-lima w-20 h-20 -translate-x-21 rounded-2xl origin-center">
+              <img src="/icons/Iconos-20.svg" alt="" class="object-contain w-full h-full">
+            </div>
+            </a>
+            <div class="bg-lima overflow-hidden rounded-2xl w-full">
+              <img src="/Somos/ALEJO.png" alt="" class="-scale-x-100 translate-y-10">
+            </div>
+          </div>
+        <h2 class="text-5xl font-tektur text-center text-lima">Alejandro Moreno</h2>
+        <p>Estudiante de diseño grafico en el instituto de Bellas Artes, director del equipo, diseñador del manual Vol.1 y desarrollador del sitio web, con aporte a los graficos pixeleados y la paleta de colores, creador de la tipografia "Pixeloide"</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <div class="flex">
+            <div class="bg-lima overflow-hidden rounded-2xl">
+              <img src="/Somos/ANGEL.png" alt="" class="translate-y-10">
+            </div>
+            <a href="https://www.instagram.com/almobu_artz/" target="_blank">
+              <div class="absolute bg-lima w-20 h-20 translate-x-1 rounded-2xl origin-center">
+                <img src="/icons/Iconos-20.svg" alt="" class="object-contain w-full h-full">
+              </div>
+            </a>
+        </div>
+        <h2 class="text-5xl font-tektur text-center text-lima">Angel Poveda</h2>
+        <p>Estudiante de diseño grafico en el instituto de Bellas Artes, co-redactor de la investigacion, diseñador del manual Vol.2 y la infografia, con aporte a las imagenes con tramas y el estilo tipografico, creador de la tipografia "Trigger"</p>
+      </div>
+    </div>
+  </main>
+
+</Layout>

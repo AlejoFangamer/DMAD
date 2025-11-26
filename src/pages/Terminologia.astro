@@ -1,8 +1,64 @@
 ---
+import Boton from "../components/Boton.astro";
 import TitulosAnim from "../components/TitulosAnim.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <TitulosAnim name="termin" transition:name="termin"  titulo="Terminologia UX"></TitulosAnim>
+  <main class="p-10 max-w-250">
+    <TitulosAnim name="termin" titulo="Terminologia U" icono="/icons/Iconos-06-v.svg"></TitulosAnim>
+
+    <p class="w-full text-blanco text-center text-2xl font-kaku">¡A tomar nota! Conoce los multiples conceptos que rodean del buen UX y como aplicarlos a los videojuegos</p>
+
+    <h2 class="text-center font-tektur text-4xl text-blanco">LA EXPERIENCIA</h2>
+    <div class="flex flex-col lg:grid grid-cols-3 w-full gap-10 mt-10">
+      <Boton
+        trans="a"
+        class="aspect-2/1"
+        text="Fricción"
+        icono="/icons/Iconos-01.svg"
+      ></Boton>
+      <Boton
+        trans="b"
+        class="aspect-2/1"
+        text="Flujo"
+        icono="/icons/Iconos-13.svg"
+      ></Boton>
+      <Boton
+        trans="c"
+        class="aspect-2/1"
+        text="Usabilidad"
+        icono="/icons/Iconos-11.svg"
+      ></Boton>
+    </div>
+
+    <h2 class="text-center font-tektur text-4xl text-blanco">PRINCIPIOS</h2>
+    <div class="flex flex-col lg:grid grid-cols-3 w-full gap-10 mt-10">
+      <Boton
+        trans="d"
+        class="aspect-2/1"
+        text="Control"
+        icono="/icons/Iconos-06.svg"
+      ></Boton>
+      <Boton
+        trans="e"
+        class="aspect-2/1"
+        text="Coherencia"
+        icono="/icons/Iconos-12.svg"
+      ></Boton>
+      <Boton
+        trans="f"
+        class="aspect-2/1"
+        text="Errores"
+        icono="/icons/Iconos-10.svg"
+      ></Boton>
+      <Boton
+        trans="h"
+        class="aspect-2/1"
+        text="Flexibilidad"
+        icono="/icons/Iconos-14.svg"
+      ></Boton>
+    </div>
+
+  </main>
 </Layout>

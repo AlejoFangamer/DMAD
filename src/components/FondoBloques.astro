@@ -1,0 +1,31 @@
+<div class="hidden xl:inline-grid absolute translate-x-1/4 -left-1/2 top-0 h-200 w-100 grid grid-cols-3 grid-rows-[repeat(5,1fr)] gap-2 opacity-50">
+    <img src="/icons/Iconos-01.svg" alt="" class="bloc bg-lima rounded-2xl">
+    <img src="/icons/Iconos-02.svg" alt="" class="bloc bg-lima rounded-2xl col-span-2">
+    <img src="/icons/Iconos-03.svg" alt="" class="bloc bg-lima rounded-2xl col-span-2">
+    <img src="/icons/Iconos-04.svg" alt="" class="bloc bg-lima rounded-2xl">
+    <img src="/icons/Iconos-05.svg" alt="" class="bloc bg-lima rounded-2xl">
+    <img src="/icons/Iconos-06.svg" alt="" class="bloc bg-lima rounded-2xl col-span-2">
+    <img src="/icons/Iconos-03.svg" alt="" class="bloc bg-lima rounded-2xl col-span-2">
+</div>
+
+<div class="hidden xl:inline-grid absolute -right-1/2 -translate-x-1/4 top-0 h-200 w-100 grid grid-cols-3 grid-rows-[repeat(5,1fr)] gap-2 opacity-50 -z-2">
+    <img src="/icons/Iconos-14.svg" alt="" class="bloc bg-lima rounded-2xl col-span-2">
+    <img src="/icons/Iconos-08.svg" alt="" class="bloc bg-lima rounded-2xl order-0">
+    <img src="/icons/Iconos-09.svg" alt="" class="bloc bg-lima rounded-2xl ">
+    <img src="/icons/Iconos-10.svg" alt="" class="bloc bg-lima rounded-2xl col-span-2">
+    <img src="/icons/Iconos-11.svg" alt="" class="bloc bg-lima rounded-2xl col-span-2">
+    <img src="/icons/Iconos-12.svg" alt="" class="bloc bg-lima rounded-2xl order-0">
+    <img src="/icons/Iconos-13.svg" alt="" class="bloc bg-lima rounded-2xl col-start-2 col-span-2">
+</div>
+
+
+<script>
+  import { animate, stagger } from "animejs";
+  
+  animate('.bloc',{
+    scale: ["50%","100%"],
+    opacity: ["0%","100%"],
+    ease:"outBack",
+    delay: stagger(100,{ from: 'last' })
+  })
+</script>
