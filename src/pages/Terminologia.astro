@@ -10,8 +10,16 @@ import Layout from "../layouts/Layout.astro";
 
     <p class="w-full text-blanco text-center text-2xl font-kaku">¡A tomar nota! Conoce los multiples conceptos que rodean del buen UX y como aplicarlos a los videojuegos</p>
 
-    <h2 class="text-center font-tektur text-4xl text-blanco">LA EXPERIENCIA</h2>
+    <p class="text-lima text-[10pt]">¡Esta página actualmente está en fase de prototipado! Cosas como la maquetación, la navegación y la funcionalidad están definidas; sin embargo, el contenido aún sigue en desarrollo; por esa razón, es posible que algunos botones no funcionen.</p>
+
+    <h2 class="text-center font-tektur text-4xl text-blanco">CONCEPTOS CLAVE</h2>
     <div class="flex flex-col lg:grid grid-cols-3 w-full gap-10 mt-10">
+      <Boton
+        trans="H"
+        class="aspect-2/1"
+        text="Flujo"
+        icono="/icons/Iconos-02.svg"
+      ></Boton>
       <Boton
         trans="a"
         class="aspect-2/1"
@@ -21,41 +29,47 @@ import Layout from "../layouts/Layout.astro";
       <Boton
         trans="b"
         class="aspect-2/1"
-        text="Flujo"
+        text="Motivaciones"
         icono="/icons/Iconos-13.svg"
       ></Boton>
       <Boton
-        trans="c"
+        trans="w"
         class="aspect-2/1"
         text="Usabilidad"
         icono="/icons/Iconos-11.svg"
       ></Boton>
+      <Boton
+        trans="c"
+        class="aspect-2/1"
+        text="Inmersion"
+        icono="/icons/Iconos-14.svg"
+      ></Boton>
     </div>
 
-    <h2 class="text-center font-tektur text-4xl text-blanco">PRINCIPIOS</h2>
+    <h2 class="text-center font-tektur text-4xl text-blanco">TERMINOLOGIAS</h2>
     <div class="flex flex-col lg:grid grid-cols-3 w-full gap-10 mt-10">
       <Boton
         trans="d"
         class="aspect-2/1"
-        text="Control"
+        text="Jugabilidad"
         icono="/icons/Iconos-06.svg"
       ></Boton>
       <Boton
         trans="e"
         class="aspect-2/1"
-        text="Coherencia"
+        text="User Interface"
         icono="/icons/Iconos-12.svg"
       ></Boton>
       <Boton
         trans="f"
         class="aspect-2/1"
-        text="Errores"
+        text="Game UX"
         icono="/icons/Iconos-10.svg"
       ></Boton>
       <Boton
         trans="h"
         class="aspect-2/1"
-        text="Flexibilidad"
+        text="Accesibilidad"
         icono="/icons/Iconos-14.svg"
       ></Boton>
     </div>

@@ -8,9 +8,11 @@ import Layout from "../layouts/Layout.astro";
   <main class="p-10 max-w-250">
     <TitulosAnim name="noticias" titulo="Noticias UX" icono="/icons/Iconos-07-v.svg"></TitulosAnim>
 
-    <p class="w-full text-blanco text-center text-2xl font-kaku">Las ultimas novedades en el mundo de la experiencia del usuario en videojuegos.</p>
+    <p class="w-full text-blanco text-center text-2xl font-kaku">Las últimas novedades en el mundo de la experiencia del usuario en videojuegos.</p>
 
-    <div class="relative h-100 flex flex-col justify-end p-10 w-full overflow-hidden rounded-2xl box-border">
+    <p class="text-lima text-[10pt]">¡Esta página actualmente está en fase de prototipado! Cosas como la maquetación, la navegación y la funcionalidad están definidas; sin embargo, el contenido aún sigue en desarrollo; por esa razón, es posible que algunos botones no funcionen.</p>
+
+    <div class="relative h-200 md:h-100 flex flex-col justify-end p-10 w-full overflow-hidden rounded-2xl box-border">
       <div class="absolute left-0 top-0 bg-center w-full h-full bg-[url(/Noticias/1.webp)] bg-cover bg-no-repeat mask-linear-from-20% mask-linear-180 object-cover">
       </div>
       <div class="relative">
@@ -20,21 +22,24 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
 
-    <h2 class="text-center font-tektur text-4xl text-blanco">Otras noticias ux</h2>
+    <h2 class="text-center font-tektur text-4xl text-blanco">Otras noticias UX</h2>
     <div class="flex flex-col lg:grid grid-cols-2 w-full gap-10 mt-10">
-      <Boton
-        trans="d"
-        class="aspect-2/1"
-        text="Noticia 1"
-        icono="/icons/Iconos-06.svg"
-      ></Boton>
-      <Boton
-        trans="e"
-        class="aspect-2/1"
-        text="Noticia 2"
-        icono="/icons/Iconos-12.svg"
-      ></Boton>
-    </div>
+      
+      <div class="relative flex flex-col justify-end aspect-1/2 md:aspect-2/1 w-full bg-lima p-5 box-border rounded-2xl overflow-hidden">
+        <div class="absolute bg-[url(/Noticias/2.webp)] w-full h-full bg-cover bottom-0 left-0 bg-center mask-linear-to-70% mask-linear-from-50% mask-linear-180 brightness-70"></div>
+        <h2 class="font-tektur text-3xl text-azul md:text-blanco m-0 z-1">Menús de Call of Duty CONFUSOS?</h2>
+        <p class="font-kaku text-azul m-0 z-1">Usuarios reportan no entender el sistema de interfaces de Call of Duty, ¿culpa de una mala UX? ...</p>
+      </div>
+      <div class="relative flex flex-col justify-end aspect-1/2 md:aspect-2/1 w-full bg-lima p-5 box-border rounded-2xl overflow-hidden">
+        <div class="absolute bg-[url(/Noticias/2.jpg)] w-full h-full bg-cover bottom-0 left-0 bg-center mask-linear-to-70% mask-linear-from-50% mask-linear-180 brightness-50"></div>
+        <h2 class="font-tektur text-3xl text-azul md:text-blanco m-0 z-1">Seacret 1: la mala experiencia hecha polemica</h2>
+        <p class="font-kaku text-azul m-0 z-1">El juego del polemico youtuber está en boca de todos, en este articulo analizaremos...</p>
+      </div>
+      <div class="relative flex flex-col justify-end aspect-1/2 md:aspect-2/1 w-full bg-lima p-5 box-border rounded-2xl overflow-hidden text-pretty">
+        <div class="absolute bg-[url(/Noticias/3.jpg)] w-full h-full bg-cover bottom-0 left-0 bg-center mask-linear-to-70% mask-linear-from-50% mask-linear-180 brightness-50"></div>
+        <h2 class="font-tektur text-3xl text-azul md:text-blanco m-0 z-1">El innovador UI de Dead Space</h2>
+        <p class="font-kaku text-azul m-0 z-1">Este icónico juego de terror de supervivencia es conocido por su excelente interfaz de usuario integrada...</p>
+      </div>
 
   </main>
 </Layout>

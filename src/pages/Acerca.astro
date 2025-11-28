@@ -12,11 +12,11 @@ import Layout from "../layouts/Layout.astro";
       "DEL MANDO AL DISEÑO" surge a partir del interés por resolver, analizar y comunicar la experiencia de usuario dentro del diseño de videojuegos contemporáneos, especialmente en un público joven adulto. Ya que se ha encontrado que muchos jugadores que se encuestaron reportan haber tenido malas experiencias en una década marcada por lo digital y análogo, por ello, la investigación busca comprender cómo los principios del diseño UX influyen en la percepción, la interacción y la emoción del jugador mediante los entornos virtuales de un videojuego.
       </p>
 
-      <div class="grid grid-cols-2 items-center gap-10">
+      <div class="flex flex-col md:grid grid-cols-2 items-center gap-10">
         <div>
           <h2 class="text-5xl text-lima font-tektur font-medium">Origenes</h2>
-          <p class="text-left text-[14pt]">
-            Alrededor de Agosto 2025, se encuestaron a 21 Jóvenes adultos sobre sus experiencias con el diseño de los videojuegos, de los cuales reportaron ciertos patrones donde se sintieron frustrados o incómodos por una mala experiencia relacionadas a la interacción, como mapas confusos, bugs o controles fastidiosos. Eso y en base a algunas entrevistas con expertos, supimos que, desde nuestra carrera de diseño gráfico, podríamos intervenir aportando instrumentos visuales educativos sobre principios de la experiencia de usuario dirigidos a los desarrolladores para que puedan crear juegos pensados en el jugador.
+          <p class="text-left md:text-[14pt]">
+            Alrededor de agosto de 2025, se encuestó a 21 jóvenes adultos sobre sus experiencias con el diseño de los videojuegos, de los cuales reportaron ciertos patrones donde se sintieron frustrados o incómodos por una mala experiencia relacionada con la interacción, como mapas confusos, bugs o controles fastidiosos. Eso y, en base a algunas entrevistas con expertos, supimos que, desde nuestra carrera de diseño gráfico, podríamos intervenir aportando instrumentos visuales educativos sobre principios de la experiencia de usuario dirigidos a los desarrolladores para que puedan crear juegos pensados en el jugador.
           </p>
         </div>
         <div class="w-full h-100 rounded-2xl overflow-hidden">
@@ -26,48 +26,51 @@ import Layout from "../layouts/Layout.astro";
       <div>
         <h2 class="text-5xl text-lima font-tektur font-medium">Tipografías</h2>
 
-        <div class="grid grid-cols-2 h-50 rounded-2xl overflow-hidden">
+        <div class="flex flex-col md:grid grid-cols-2  rounded-2xl overflow-hidden">
           <img src="/Acerca/Pix-Boc.webp" alt="" class="h-full w-full shrink-0 object-cover">
           <img src="/Acerca/Trig-Boc.webp" alt="" class="h-full w-full shrink-0 object-cover">
         </div>
 
-        <p>Se realizaron 2 tipografias que siguen las misma linea grafica, geometricas y rectilineas, inspiradas en los pixeles y poligonos de varios videojuegos. Estas tipografias fueron usadas en la publicidad y estilo del proyecto, ya sea en afiches o en las portadas de nuestras piezas.</p>
+        <p class="text-left">Se realizaron 2 tipografías que siguen la misma línea gráfica, geométricas y rectilíneas, inspiradas en los píxeles y polígonos de varios videojuegos. Estas tipografías fueron usadas en la publicidad y estilo del proyecto, ya sea en afiches o en las portadas de nuestras piezas.</p>
       </div>
 
-      <div class="grid grid-cols-2 h-full gap-5">
-        <div>
-          <h2 class="font-pixeloide tracking-wide text-7xl">Pixeloide</h2>
-          <div class="rounded-2xl overflow-hidden w-full h-150">
-            <img src="/Acerca/Pix-Esp.webp" alt="" class="h-full object-cover">
-          </div>
+      <div class="flex flex-col md:grid grid-cols-2 h-full gap-5">
+        <div class="bg-lima p-10 rounded-2xl">
+          <h2 class="font-pixeloide tracking-wide text-6xl text-azul my-5 mt-0">Pixeloide</h2>
+          <div class="rounded-2xl overflow-hidden w-full h-100 bg-cover bg-no-repeat bg-center bg-[url(/Acerca/Pix-Esp.webp)]"></div>
         </div>
-        <div class="flex flex-col">
-          <h2 class="font-trigger text-7xl">Trigger</h2>
-          <div class="rounded-2xl overflow-hidden h-150">
-            <img src="/Acerca/Trig-Esp.webp" alt="" class="h-full object-contain origin-center">
-          </div>
+        <div class="bg-lima p-10 rounded-2xl">
+          <h2 class="font-trigger text-7xl text-azul my-5 mt-0">Trigger</h2>
+          <div class="rounded-2xl overflow-hidden w-full h-100 bg-cover bg-no-repeat bg-center bg-[url(/Acerca/Trig-Esp.webp)]"></div>
         </div>
       </div>
 
-      <h2 class="text-5xl text-lima font-tektur font-medium">Infografia</h2>
+      <div>
+        <h2 class="text-5xl text-lima font-tektur font-medium">Infografía</h2>
+        <img src="/Acerca/Info.webp" alt="" class="object-cover w-full h-full rounded-2xl">
+        <p class="text-left">La infografía funciona como una pieza gráfica de alta síntesis, diseñada para comunicar de manera inmediata y visual los conceptos fundamentales del proyecto. Su propósito es atraer tanto a jugadores como a diseñadores y desarrolladores, ofreciéndoles una entrada clara y accesible al universo teórico del manual.</p>
+      </div>
 
-      <div class="grid grid-cols-2 justify-center gap-10">
-        <div class="h-full w-full rounded-2xl overflow-hidden shrink-0">
+      <div class="flex flex-col md:grid grid-cols-2 justify-center gap-10">
+        <div class="hidden md:inline h-full w-full rounded-2xl overflow-hidden shrink-0">
           <img src="/Carrousel/1.webp" alt="" class="object-cover w-full h-full rounded-2xl">
         </div>
         <div>
           <h2 class="text-5xl text-lima font-tektur font-medium ">Manuales</h2>
-          <p class="text-[14pt]"> Nuestro producto estrella, estos manuales que vienen en formatos fisicos y virtuales funcionan como una base y atemporal sobre los conceptos de Experiencia de usuario aplicados a videojuegos, incluyendo principios, ejemplos y en general, una guía teoría y didáctica visual de consulta para desarrolladores donde les aportamos información valiosa y necesaria sobre el mundo UX</p>
+          <div class="inline md:hidden h-full w-full rounded-2xl overflow-hidden shrink-0">
+            <img src="/Carrousel/1.webp" alt="" class="object-cover w-full h-full rounded-2xl">
+          </div>
+          <p class="md:text-[14pt] text-left"> Nuestro producto estrella, estos manuales que vienen en formatos fisicos y virtuales concebidos como una base teórica atemporal sobre la experiencia de usuario aplicada a los videojuegos. Estos documentos reúnen principios, modelos conceptuales, ejemplos analíticos y referencias visuales que permiten comprender los fundamentos del UX desde una perspectiva clara y didáctica. Funcionan como una guía de consulta permanente para desarrolladores y diseñadores, ofreciendo contenido riguroso, estructurado y visualmente orientado que facilita la apropiación de conceptos esenciales del diseño de experiencia en entornos interactivos</p>
         </div>
       </div>
       
       <div>
         <h2 class="text-5xl text-lima font-tektur font-medium">Sitio web</h2>
         <img src="/Acerca/Pag.webp" alt="" class="object-cover w-full h-full rounded-2xl">
-        <p> Es la pieza que estas presenciando ahora mismo que sirve como un espacio mas dinamico y evolutivo, una version contemporanea de los manuales donde encontrarás: Nuevos conceptos experimentales, Recursos y Toolkits para desarrolladores y un tablon de noticias del mundo UX para que no te pierdas de alguna novedad o reconocimiento, todo con el fin de ser una plataforma accesible e interactuable siempre a la mano de la gente.</p>
+        <p class="text-left text-pretty">Es la pieza que estás presenciando ahora mismo, que sirve como un espacio más dinámico y evolutivo, una versión contemporánea de los manuales donde encontrarás: Nuevos conceptos experimentales, recursos y toolkits para desarrolladores y un tablón de noticias del mundo UX para que no te pierdas de alguna novedad o reconocimiento, todo con el fin de ser una plataforma accesible e interactuable siempre a la mano de la gente.</p>
       </div>
 
-      <p>¿Que estas esperando? explora más de nuestras secciones y ¡QUE COMIENCE EL JUEGO!</p>
+      <p>¿Qué estás esperando? Explora más de nuestras secciones y ¡QUE COMIENCE EL JUEGO!</p>
     </div>
   </main>
 </Layout>

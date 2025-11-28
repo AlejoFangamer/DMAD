@@ -85,14 +85,15 @@ const imgs = [
         />
 
         <div class="flex flex-col -order-1 md:-order-0 sm:col-span-2 justify-center sEle">
-          <h1 class="text-left font-tektur text-5xl text-lima">Nuestras secciones</h1>
+          <h1 class="text-center md:text-left font-tektur text-5xl text-lima">Nuestras secciones</h1>
           <p class="font-kaku text-blanco text-pretty">Todo lo que nuestra web tiene para ofrecerte, explora cada uno y aprende del maravilloso mundo UX, desde recursos y herramientas, hasta noticias.</p>
         </div>
 
         <Boton
           icono="/icons/Iconos-14.svg"
-          trans="q"
-          text="Recursos"
+          trans="recur"
+          text="Recursos UX"
+          href="/Recursos"
           sub="Herramientas digitales que te ayudarán en la exploración de la UX en tus proyectos"
           class="sm:col-start-2 sEle"
         />
@@ -107,7 +108,7 @@ const imgs = [
         />
 
         <div
-          class="md:col-span-3 absolute bg-[url(/images/3.png)] w-full h-100 bg-cover bg-no-repeat md:bg-contain bg-center left-0 -translate-y-1/2 md:translate-y-80 translate-x-70 md:translate-x-30 origin-right scale-200 mask-l-from-40% -z-2 -order-1 sEle"
+          class="md:col-span-3 absolute bg-[url(/images/3.png)] w-full h-100 bg-cover bg-no-repeat md:bg-contain bg-center left-0 -translate-y-1/2 md:translate-y-80 translate-x-70 md:translate-x-30 origin-right scale-200 mask-linear-from-40% mask-linear-180 md:mask-linear-270 -z-2 -order-1 sEle"
         >
         </div>
 
@@ -123,11 +124,11 @@ const imgs = [
 
     <section class="flex flex-col grid-cols-2 w-full md:flex-row section md:gap-10">
         <div class="row-span-2">
-          <h2 class="font-tektur text-lima text-4xl text-center sEle md:hidden block">Manuales complementarios</h2>
+          <h2 class="font-tektur text-lima text-5xl text-center sEle md:hidden block">Manuales UX</h2>
           <Carrusel images={imgs} ></Carrusel>
         </div>
         <div class="flex flex-col justify-between">
-          <h2 class="font-tektur text-lima text-4xl text-center sEle hidden md:block mt-0">Manuales complementarios</h2>
+          <h2 class="font-tektur text-lima text-5xl text-center sEle hidden md:block mt-0">Manuales UX</h2>
           <p class="sEle text-blanco font-kaku text-pretty text-center font-medium">
           Consigue nuestros manuales sobre la UX en los videojuegos, con
           información mas profunda, terminología atemporal, casos de estudio

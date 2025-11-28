@@ -6,47 +6,42 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <main class="p-10 max-w-250">
-    <TitulosAnim name="termin" titulo="Terminologia UX" icono="/icons/Iconos-06-v.svg"></TitulosAnim>
+    <TitulosAnim name="recur" titulo="Recursos UX" icono="/icons/Iconos-06-v.svg"></TitulosAnim>
 
-    <p class="w-full text-blanco text-center text-2xl font-kaku">¡A tomar nota! Conoce los multiples conceptos que rodean del buen UX y como aplicarlos a los videojuegos</p>
+    <p class="w-full text-blanco text-center text-2xl font-kaku">Esta sección reúne herramientas externas relevantes y accesibles para el aprendizaje UX.</p>
+    
+     <h2 class="text-center font-tektur text-4xl text-blanco">Colección de la comunidad</h2>
+    <div class="flex flex-col lg:grid grid-cols-2 w-full gap-10 mt-10">
+      
+      <a href="https://gameuidatabase.com/"  target="_blank" class="no-underline">
+        <div class="relative flex flex-col justify-end aspect-1/2 md:aspect-2/1 w-full bg-lima p-5 box-border rounded-2xl overflow-hidden hover:scale-105 transition-all cursor-pointer">
+          <div class="absolute bg-[url(/Recursos/1.webp)] w-full h-full bg-cover bottom-0 left-0 bg-center mask-linear-to-70% mask-linear-from-50% mask-linear-180 brightness-70"></div>
+          <h2 class="font-tektur text-3xl text-azul md:text-blanco m-0 z-1">GAME UI DATABASE</h2>
+          <p class="font-kaku text-azul m-0 z-1">La más grande coleccion de capturas de diferentes interfaces de videojuegos listas para ser estudiadas.</p>
+        </div>
+      </a>
 
-    <h2 class="text-center font-tektur text-4xl text-blanco">LA EXPERIENCIA</h2>
-    <div class="flex flex-col lg:grid grid-cols-3 w-full gap-10 mt-10">
-      <Boton
-        class="aspect-2/1"
-        text="Fricción"
-      ></Boton>
-      <Boton
-        class="aspect-2/1"
-        text="Flujo"
-
-      ></Boton>
-      <Boton
-        class="aspect-2/1"
-        text="Usabilidad"
-      ></Boton>
-    </div>
-
-    <h2 class="text-center font-tektur text-4xl text-blanco">PRINCIPIOS</h2>
-    <div class="flex flex-col lg:grid grid-cols-3 w-full gap-10 mt-10">
-      <Boton
-        class="aspect-2/1"
-        text="Control"
-      ></Boton>
-      <Boton
-        class="aspect-2/1"
-        text="Coherencia"
-
-      ></Boton>
-      <Boton
-        class="aspect-2/1"
-        text="Errores"
-      ></Boton>
-      <Boton
-        class="aspect-2/1"
-        text="Flexibilidad"
-      ></Boton>
-    </div>
+      <a href="https://kenney.nl/" target="_blank" class="no-underline">
+        <div class="relative flex flex-col justify-end aspect-1/2 md:aspect-2/1 w-full bg-lima p-5 box-border rounded-2xl overflow-hidden hover:scale-105 transition-all cursor-pointer">
+          <div class="absolute bg-[url(/Recursos/2.webp)] w-full h-full bg-cover bottom-0 left-0 bg-center mask-linear-to-70% mask-linear-from-50% mask-linear-180 brightness-50"></div>
+          <h2 class="font-tektur text-3xl text-azul md:text-blanco m-0 z-1">KENNEY ASSETS</h2>
+          <p class="font-kaku text-azul m-0 z-1">Pequeños assets de videojuegos por y para desarrolladores libres de derechos para planear tus interfaces.</p>
+        </div>
+      </a>
+      <a href="https://figma.com/" target="_blank" class="no-underline">
+        <div class="relative flex flex-col justify-end aspect-1/2 md:aspect-2/1 w-full bg-lima p-5 box-border rounded-2xl overflow-hidden text-pretty hover:scale-105 transition-all cursor-pointer">
+          <div class="absolute bg-[url(/Recursos/4.webp)] w-full h-full bg-cover bottom-0 left-0 bg-center mask-linear-to-70% mask-linear-from-50% mask-linear-180 brightness-50"></div>
+          <h2 class="font-tektur text-3xl text-azul md:text-blanco m-0 z-1">Figma</h2>
+          <p class="font-kaku text-azul m-0 z-1">La herramienta "gratis" por excelencia para planear tus diseños UX y UI.</p>
+        </div>
+      </a>
+      <a href="https://www.figma.com/es-la/comunidad/file/1460785931676185568/game-ux-kit"  target="_blank" class="no-underline">
+        <div class="relative flex flex-col justify-end aspect-1/2 md:aspect-2/1 w-full bg-lima p-5 box-border rounded-2xl overflow-hidden text-pretty hover:scale-105 transition-all cursor-pointer">
+        <div class="absolute bg-[url(/Recursos/3.webp)] w-full h-full bg-cover bottom-0 left-0 bg-center mask-linear-to-70% mask-linear-from-50% mask-linear-180 brightness-50"></div>
+        <h2 class="font-tektur text-3xl text-azul md:text-blanco m-0 z-1">Figma - Game UX KIT</h2>
+        <p class="font-kaku text-azul m-0 z-1">Una toolkit deseñado para organizar tu flujo de trabajo y crear grillas efectivas para interfaces de videojuego.</p>
+      </div>
+      </a>
 
   </main>
 </Layout>
